@@ -1,0 +1,11 @@
+# raw and derived data are not committed (source: public repo / Zenodo, see README)
+data/raw/*.xlsx
+data/processed/
+# per-run predictions are large; summary tables and figures are committed
+results/jise/groups/preds/
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+logs/
+STOP_GPU

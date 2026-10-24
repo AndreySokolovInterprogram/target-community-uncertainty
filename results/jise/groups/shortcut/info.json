@@ -1,0 +1,24 @@
+{
+  "time_utc": "2026-10-20T01:22:47Z",
+  "python": "3.12.3",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "cpu_count": 12,
+  "cuda_visible_devices": null,
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12400F",
+  "numpy": "2.1.3",
+  "pandas": "3.0.6",
+  "scikit-learn": "1.9.1",
+  "scipy": "1.18.1",
+  "tensorflow-cpu": "2.19.1",
+  "keras": "3.15.1",
+  "torch": "2.14.1+cu126",
+  "transformers": "5.20.1",
+  "sentence-transformers": "6.1.0",
+  "git_commit": "5580b50",
+  "label_noise": {
+    "label1": 5656,
+    "label1_without_delivery_or_order_words": 712,
+    "label1_recipe_like_without_order_words": 143,
+    "note": "heuristic upper/lower bounds, not manually verified"
+  }
+}

@@ -1,0 +1,7 @@
+model,false_delivery_n,predicted_other,in_10pct_least_confident,predicted_other_or_uncertain,true_delivery_n,true_delivery_predicted_other,true_delivery_in_10pct_least_confident
+"e5-base fine-tuned, ens5",22,3,8,9,128,2,6
+e5-base frozen + LR,22,5,10,11,128,2,8
+TF-IDF + LR,22,6,13,14,128,4,16
+"CNN, ens5",22,5,9,11,128,3,8
+"qwen2.5-7b, 4-shot",22,14,7,18,128,10,17
+"qwen3-8b, 4-shot",22,12,7,16,128,8,10
