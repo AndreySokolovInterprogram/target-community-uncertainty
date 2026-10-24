@@ -2,12 +2,20 @@
 
 Code and results for the paper
 
-**Uncertainty-aware search for target communities…** <!-- TODO: full title --> (submitted to the Journal of
-Information Science and Engineering, JISE).
+**Reducing Epistemic Uncertainty in Target Community Discovery on Social Media: Weak Labels, Calibration, and
+Active Learning** (submitted to the Journal of Information Science and Engineering, JISE).
 
 Extended version of the WorldCIST 2026 paper.
 
-Authors: A. V. Sokolov, A. Shutkin, E. V. Isaeva, Igor <SURNAME>.
+Authors: A. V. Sokolov<sup>1</sup>, E. V. Isaeva<sup>2,3,*</sup>, A. S. Shutkin<sup>1</sup>, O. L. Sokolova<sup>2</sup>,
+I. V. Novichenkov<sup>2</sup>, A. A. Sokolov<sup>4</sup>, A. L. Beklaryan<sup>5</sup>, I. I. Heifets<sup>2</sup>
+
+<sup>1</sup> Innopolis University, Innopolis, Russia;
+<sup>2</sup> Perm State University, Perm, Russia;
+<sup>3</sup> NUST MISIS, Moscow, Russia;
+<sup>4</sup> ITMO University, St. Petersburg, Russia;
+<sup>5</sup> HSE University, Moscow, Russia.
+<sup>*</sup> Corresponding author.
 
 The task: classify VK (VKontakte) communities as ready-food delivery services vs. other communities, with labels
 taken from the search query that returned each group, and study how uncertainty estimates (calibration,
@@ -17,7 +25,7 @@ selective prediction, active learning) behave under such noisy, query-derived la
 
 | File | Source | sha256 |
 |---|---|---|
-| `data/raw/vk_groups_dataset.xlsx` | [Mitigating_uncertainty_in_data_driven_marketing](https://github.com/AndreySokolovInterprogram/Mitigating_uncertainty_in_data_driven_marketing) @ `5c78b9c` | see `data/raw/SHA256SUMS` |
+| `data/raw/vk_groups_dataset.xlsx` | https://github.com/AndreySokolovInterprogram/Mitigating_uncertainty_in_data_driven_marketing (commit `5c78b9c`) | see `data/raw/SHA256SUMS` |
 
 The raw file is not included here. Download it from the repository above at commit `5c78b9c`, put it into
 `data/raw/` and check it:
@@ -92,7 +100,7 @@ $PY -m jise.paper_figures         # figures of the paper
 ## Manual label check
 
 `annotation/manual_label_check.xlsx` — 300 groups (stratified random sample, 150 "delivery" + 150 "other",
-seed 20261020), checked by one annotator. Columns: `n`, `vk_id`, `link`, `title`, `description` (original
+seed 20261020), checked manually by I. V. Novichenkov. Columns: `n`, `vk_id`, `link`, `title`, `description` (original
 language, Russian), `label` (query-derived label: `delivery` / `other`), `label_correct` (verdict: `yes` / `no` /
 `unclear`), `comment`. Result: 278 yes, 22 no. Class definition and instructions:
 `annotation/class_definition.md`. The sample was drawn by `src/jise/make_annotation.py`; the analysis is
@@ -115,11 +123,13 @@ results/jise/      tables, figures, run metadata (per-run predictions not in git
 ## Citation
 
 ```bibtex
-@article{TODO,
-  title   = {TODO},
-  author  = {Sokolov, A. V. and Shutkin, A. and Isaeva, E. V. and <SURNAME>, Igor},
+@article{sokolov_jise_target_communities,
+  title   = {Reducing Epistemic Uncertainty in Target Community Discovery on Social Media: Weak Labels,
+             Calibration, and Active Learning},
+  author  = {Sokolov, A. V. and Isaeva, E. V. and Shutkin, A. S. and Sokolova, O. L. and Novichenkov, I. V. and
+             Sokolov, A. A. and Beklaryan, A. L. and Heifets, I. I.},
   journal = {Journal of Information Science and Engineering},
-  year    = {TODO}
+  note    = {Submitted}
 }
 ```
 
